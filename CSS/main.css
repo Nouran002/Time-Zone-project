@@ -1,0 +1,553 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* navvvvvvvvvvvvvvv_barrrrr */
+header {
+    position: fixed;
+    z-index: 997;
+    overflow: hidden;
+    font-size: 10px;
+    padding: 10px;
+    top: 0;
+    width: 100%;
+    color: black;
+    font-weight: 300;
+    background-color: #fff;
+}
+
+.nav_ul {
+    text-align: center;
+}
+
+.nav_list {
+    display: inline;
+    margin-right: 40px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+.nav_link {
+    color: black;
+    /* عشان اشيل الخط اللي تحت اللينك */
+    text-decoration: none;
+
+}
+
+.nav_link:hover {
+    color: red;
+
+}
+
+.imgg {
+    padding-top: 15px;
+    margin-left: 20px;
+    width: 200px;
+}
+
+.icon i {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    font-size: 30px;
+    background-color: red;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 999;
+    text-align: center;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+/* sectionnnnnnnnnn1 */
+.section1 {
+    /* background-color: rgb(165, 164, 164);
+    margin-top: 30px;
+    /* عشان الديفتين اللي جوا السكشن (الكلام والصوره يجوا جمب بعض  */
+    /* display: flex; */
+    height: 130vh;
+    background: #f0f0f2;
+    overflow: hidden;
+
+}
+
+.section1 .row {
+    height: 130vh;
+    align-items: center;
+    display: flex;
+}
+
+.text_section1 {
+    padding: 70px;
+
+}
+
+.text_section1 h1 {
+    margin: 40px 0;
+    font-size: 60px;
+    /* font-size: 2.5rem; */
+    font-weight: 800;
+    line-height: 1.4;
+    padding-bottom: 50px;
+    color: red;
+}
+
+.img_section1 {
+
+    /* الوقت اللي هياخده الانيميشن */
+    animation-name: img;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+
+/* عشان اشوف الحركه بدايتها ونصها واخرها هتكبر وتصغر  */
+@keyframes img {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.button_section1 {
+    color: #fff;
+    background-color: red;
+    border: none;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.button_section1::after {
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    background-color: #4a4a4b;
+    inset: 0;
+    z-index: -1;
+    transition: all .5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.button_section1:hover.button_section1::after {
+    width: 100%;
+}
+
+/* sectiooooon222222 */
+.section2 {
+    padding: 30px;
+}
+
+.section2 .text {
+    margin-top: 50px;
+
+}
+
+.section2 h1 {
+    font-size: 60px;
+    font-weight: 600;
+    color:red;
+}
+
+.section2 .row {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin-bottom: 70px;
+}
+
+.section2 .row .card {
+    margin-right: 30px;
+    border: none;
+    text-align: center;
+
+}
+
+.section2 .card h3 {
+    text-align: center;
+}
+
+.section2 .card p {
+    text-align: center;
+    color: red;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
+/* section3333333333 */
+.section3{
+   text-align: center;
+    padding: 10px;
+}
+.section3 h1 {
+    font-size: 60px;
+    font-weight: 700;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.section3 p {
+    text-align: center;
+}
+
+.section3 .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.section3 .row .card {
+    margin-right: 30px;
+    margin-top: 10px;
+
+}
+
+
+.section3 .row .card h3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.section3 .row .card p {
+    text-align: center;
+    color: red;
+}
+.section3 .row .card .Card_img2{
+    /* الاب بياخد الريلاتيف عشان الابن يطلع فوقيه */
+    position: relative;
+    /* عشان الزرار يختفي  */
+    overflow: hidden;       
+}
+.section3 .row .btn{
+    /* الابن بياخد ابسليوت عشان يطلع ع الاب */
+    position: absolute;
+    width: 100%;
+    right: 0;
+    left: 0;
+    /* عشان انزل الزرار خالص */
+   bottom: -40px; 
+   transition: all 0.5s;
+   /* عشان احول شكل الماوس هكنه زرار */
+   cursor: pointer;
+   color: #fff;
+   background-color: red;
+   border: none;
+   font-size: 16px;
+   font-weight: 600;
+   font-family: "Josefin Sans",sans-serif;
+   padding: 10px 50px;
+   margin: 10px auto;
+   
+}
+.Card_img2:hover .btn{
+    bottom: -10px;
+}
+.section3 .row .card .Card_img2{
+    /* الاب بياخد الريلاتيف عشان الابن يطلع فوقيه */
+    position: relative;
+    /* عشان الزرار يختفي  */
+    overflow: hidden;       
+}
+.section3 .row .btn{
+    /* الابن بياخد ابسليوت عشان يطلع ع الاب */
+    position: absolute;
+    width: 100%;
+    right: 0;
+    left: 0;
+    /* عشان انزل الزرار خالص */
+   bottom: -40px; 
+   transition: all 0.5s;
+   /* عشان احول شكل الماوس هكنه زرار */
+   cursor: pointer;
+   color: #fff;
+   background-color: red;
+   border: none;
+   font-size: 16px;
+   font-weight: 600;
+   font-family: "Josefin Sans",sans-serif;
+   padding: 10px 50px;
+   margin: 10px auto;
+   
+}
+.Card_img2:hover .btn{
+    bottom: -10px;
+}
+.Shop_Now{
+    color: #fff;
+    background-color: #4a4a4b;
+    position: relative;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+ .Shop_Now::after{
+    content: "";
+    background-color: red;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    transition: all .5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+.Shop_Now:hover.Shop_Now::after{
+    width: 100%;
+ }
+ /* setionnnnnnn44444 */
+ .section4{
+    padding: 30px;
+ }
+ .section4 .row{
+    display: flex;
+    align-items: center;
+    margin-left: 20%;
+ }
+ .section4 .row .card{
+    margin-right: 30px;
+    margin-top: 20px;
+ }
+ .section4 h1 {
+    font-size: 60px;
+    font-weight: 700;
+    padding-bottom: 30px;
+    text-align: center;
+    color:black;
+}
+
+.Shop_Watches{
+    background-color: red;
+    position: relative;
+    z-index: 1;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    align-items: center;
+    margin-top: 60px;
+
+}
+.Shop_Watches::after{
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: #4a4a4b;
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    transition:all .5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    cursor: pointer;
+}
+.Shop_Watches:hover.Shop_Watches::after{
+    width: 100%;
+
+}
+/* setionnnnnn55555*/
+.section4{
+    padding: 30px;
+ }
+ .section5 .row{
+    display: flex;
+    align-items: center;
+    margin-left: 20%;
+ }
+ .section5 .row .card{
+    margin-right: 30px;
+    margin-top: 20px;
+ }
+ .section5 h1 {
+    font-size: 60px;
+    font-weight: 700;
+    padding-bottom: 30px;
+    text-align: center;
+    color: black;
+}
+ .Shop_Watches{
+    background-color: red;
+    position: relative;
+    z-index: 1;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    align-items: center;
+    margin-top: 60px;
+
+}
+.Shop_Watches::after{
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: #4a4a4b;
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    transition:all .5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    cursor: pointer;
+}
+.Shop_Watches:hover.Shop_Watches::after{
+    width: 100%;
+
+}
+/* section6666666666 */
+.section6{
+margin-top: 60px;
+}
+.section6 .row{
+    display: flex;
+    align-items: center;
+    background-color: red;
+    padding: 70px;
+}
+.section6 .row .card{
+    margin-right: 20px;
+   }
+.section6 .row h2{
+ color: white;
+ margin-bottom: 20px;
+}
+.section6 .row h3{
+    color: black;
+    margin-bottom: 20px;
+   }
+   .section6 .row p{
+   line-height: 1.2;
+   }
+
+    /* section7777777777  */
+    .section7 {
+     padding: 70px;
+     }
+    
+    .section7 .row {
+        align-items: center;
+        /* جابتهم جمب بعض */
+        display: flex;
+    }
+    .section7 .row .card{
+        /* وسطنتهم */
+     margin: auto;
+    }
+    .section7 .row .card .Logo_img{
+        margin-bottom: 20px;
+       }
+    .section7 .row .card  h3 {
+        color: #fea116;
+        font-size: 1.5rem;
+        font-family: "Pacifico", cursive;
+        margin-bottom: 20px;
+    
+    }
+
+    .section7 .row .card  p {
+        color: gray;
+    }
+    
+    .section7 .row .card ul li {
+        list-style-type: none;
+        margin-bottom: 15px;
+    }
+    
+    .section7 .row .card   ul li a {
+        text-decoration: none;
+        color: black;
+        transition: all 0.3s;
+    }
+    
+    .section7 .row .card ul li:hover a{
+        color:red;
+        padding-left: 8px;
+    }
+    .section7 .row .card .btn{
+        padding: 10px 20px;
+        background-color: #fea116;
+        color: black;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+        display: inline-block;
+    }
+   .section7 .row .card .btn:hover {
+        background-color: #fea116a6;
+        color: red;
+    } 
+    
+    .section7 .social-media{
+        margin-top: 50px;
+ 
+    } 
+    
+   .section7 .social-media ul {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-left: 80%;
+    }
+    
+    .section7 .social-media ul li {
+        padding: 0 10px;
+        list-style: none;
+    }
+    .section7 .social-media ul li a{
+        text-decoration: none;
+    }
+    .section7 .social-media p{
+        color: gray;
+    }
+    .social-icon i {
+        border:black solid 2px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: none;
+        transition: 0.3s;
+
+    }
+    
+    .social-icon i:hover {
+        background-color: red;
+        color: #0f0aa4;
+    }
+    
+    .section7 span {
+        color: red;
+    }
+    
